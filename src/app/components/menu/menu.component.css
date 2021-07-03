@@ -1,0 +1,45 @@
+a img {  
+  border-radius: 8px;
+  padding: 1px;
+}
+a {  
+  font-size: 16px;  
+  transition: 0.3s;
+}
+
+.navbar {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+/*Colores del toggle en version movil*/
+.navbar-light .navbar-toggler {
+  background-color: rgb(231, 144, 45);
+  border-color: rgb(0, 0, 0);
+}
+/*Fin colores toggle en version movil*/
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {  
+  transition: color 0.2s linear;    
+  color: rgb(237, 132, 12);
+}
+.navbar-light .navbar-nav .active > .nav-link:hover {  
+  transition: color 0.2s linear; 
+  color: rgb(237, 132, 12);
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: rgb(237, 132, 12);  
+  transition: color 0.2s linear;   
+  animation-name: flotar;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flotar{
+  from {transform:translate(0, 0px);}
+  65% {transform:translate(0, -1px);}
+  to {transform: translate(0, 0px);}    
+}
