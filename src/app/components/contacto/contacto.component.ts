@@ -30,6 +30,7 @@ export class ContactoComponent implements OnInit {
       if(response["ok"]) {
         this.exitoEnvio = true;
         $('.toast').toast('show');
+        form.resetForm();
       }
       else {
         this.exitoEnvio = false;
@@ -37,4 +38,5 @@ export class ContactoComponent implements OnInit {
       }
     });  
   }
+  
 }

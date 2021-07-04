@@ -7,7 +7,7 @@
         
         
         <!--ngNativeValidate-->
-        <form  (ngSubmit)="enviar(contactForm)" #contactForm="ngForm">
+        <form ngNativeValidate (ngSubmit)="enviar(contactForm)" #contactForm="ngForm">
             <div class="mb-3 position-relative">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" autocomplete="off" placeholder="Ingresa tu nombre" required name="nombre" ngModel>                                
