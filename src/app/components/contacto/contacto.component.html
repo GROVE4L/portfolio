@@ -1,0 +1,69 @@
+<app-menu></app-menu>
+<div class="row h-100 me-1 ms-1">
+    <div class="col-sm-6 col-md-5 offset-md-1 col-lg-4 my-auto" data-aos="fade-up" data-aos-duration="1000">        
+        <p class="font-size">Let's talk.</p>
+        <p>Get in touch via the form below, or by emailing hello@nad.is.</p>
+        <br/>     
+        
+        
+        <!--ngNativeValidate-->
+        <form  (ngSubmit)="enviar(contactForm)" #contactForm="ngForm">
+            <div class="mb-3 position-relative">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" autocomplete="off" placeholder="Ingresa tu nombre" required name="nombre" ngModel>                                
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" autocomplete="off" placeholder="Ingresa tu correo" required name="correo" ngModel>                
+            </div>
+            <div class="mb-3">
+                <label class="form-check-label" for="mensaje">Check me out</label>
+                <textarea class="form-control" name="cuerpo" id="mensaje" placeholder="Escribi un mensaje" rows="6"                                                       
+                  autocomplete="off" required name="mensaje" ngModel></textarea>
+            </div>
+            
+            <div class="d-flex">
+                <button type="submit" class="btn btn-lg" [class.bg-warning]="!enviando" [class.bg-secondary]="enviando" [disabled]="enviando">
+                    <span *ngIf="enviando" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Enviar
+                </button> 
+
+                <div class="toast hide text-white ms-auto" [class.bg-danger]="!exitoEnvio" [class.bg-success]="exitoEnvio" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <div *ngIf="exitoEnvio; else envioFallido">
+                                Envio Correcto <i class="fas fa-check-circle"></i>    
+                            </div>
+                            <ng-template #envioFallido>                                
+                                Error al enviar <i class="fas fa-exclamation-triangle"></i>    
+                            </ng-template>
+
+                            
+                        </div>
+                        <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+          </form>
+    </div>
+    <div class="col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-3 my-auto d-none d-sm-block" data-aos="fade-right" data-aos-duration="1000">
+        <img src="../../../assets/img/yo.png" alt="ImgPortada" class="img-fluid">
+    </div>
+</div>
+<!--
+<div class="position-fixed bottom-0 end-0 p-3 mb-3" style="z-index: 1">
+    <div class="toast hide bg-warning text-dark" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Mensaje Enviado Correctamente
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>-->
+
+
+<app-footer></app-footer>

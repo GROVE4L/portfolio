@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TrabajosComponent,
     FooterComponent,
     RedesSocialesComponent,
-    ModalComponent
+    ModalComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     NgbModule
   ],
   providers: [],
