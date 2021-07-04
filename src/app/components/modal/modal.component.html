@@ -1,0 +1,21 @@
+<div class="modal-header text-dark">
+    <h4 class="modal-title" id="confirm-modal-titulo">{{titulo}}</h4>    
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body text-dark">
+
+    <img [attr.src]="imgUrl" width="150" class="img-fluid mx-auto d-block">
+
+    <p class="mt-4">{{descripcion}}</p>
+    <div *ngIf="caracteristicas != null && caracteristicas.length > 0">
+        <span class="fs-3">Características</span>
+        <ul class="list-group">         
+            <div *ngFor="let i of caracteristicas">
+                <li class="list-group-item list-group-item-primary">{{i}}</li>            
+            </div>            
+        </ul>
+    </div>
+</div>
+<div class="modal-footer d-flex justify-content-center bg-light">
+    <button type="button" class="btn btn-primary" id="modal-btn-si" (click)="onActionTake()"><span class="ml-5 mr-5">Cerrar</span></button>    
+</div>

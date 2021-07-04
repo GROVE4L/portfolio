@@ -1,0 +1,8 @@
+.fondo-footer {
+    border-radius: 90px 90px 0 0;
+    background: #272727;
+}
+.fondo-footer i {
+    font-size: 80%;
+    cursor: default;
+}
