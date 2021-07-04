@@ -1,12 +1,23 @@
-<div class="modal-header text-dark">
-    <h4 class="modal-title" id="confirm-modal-titulo">{{titulo}}</h4>    
+<div class="modal-header text-dark" id="exampleModal">
+    <img [attr.src]="imgUrl" width="50" class="img-fluid me-2">
+    <h4 class="modal-title" id="confirm-modal-titulo">{{titulo}}</h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 </div>
 <div class="modal-body text-dark">
-
-    <img [attr.src]="imgUrl" width="150" class="img-fluid mx-auto d-block">
-
-    <p class="mt-4">{{descripcion}}</p>
+    <!--Mostrar la galería de fotos o, si no tiene galería, mostrar imagen principal del proyecto-->
+    <div *ngIf="galeria != null && galeria.length > 0; else sinGaleria" class="galeria">
+        <div class="text-center">            
+            <a *ngFor="let image of galeria" [attr.href]="image" data-lightbox="photos" class="mx-2 "> 
+                <img class="img-fluid" [attr.src]="image" width="150"> 
+            </a>
+        </div>
+    </div>    
+    <ng-template #sinGaleria>                                
+        <img [attr.src]="imgUrl" width="150" class="img-fluid mx-auto d-block">
+    </ng-template>
+    <!--Mostrar descripcion-->
+    <p class="mt-4" style="white-space: pre-wrap">{{descripcion}}</p>
+    <!--Mostrar listado de caracteristicas si es que tienen-->
     <div *ngIf="caracteristicas != null && caracteristicas.length > 0">
         <span class="fs-3">Características</span>
         <ul class="list-group">         
@@ -17,5 +28,5 @@
     </div>
 </div>
 <div class="modal-footer d-flex justify-content-center bg-light">
-    <button type="button" class="btn btn-primary" id="modal-btn-si" (click)="onActionTake()"><span class="ml-5 mr-5">Cerrar</span></button>    
+    <button type="button" class="btn btn-primary bg-orange border-0" id="modal-btn-si" (click)="onActionTake()"><span class="ml-5 mr-5">Cerrar</span></button>    
 </div>

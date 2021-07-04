@@ -21,7 +21,8 @@ export class TrabajosComponent implements OnInit {
         titulo: p.nombre,
         descripcion: p.descripcion,
         caracteristicas: p.caracteristicas,
-        imgUrl: p.imgUrl
+        imgUrl: p.imgUrl,
+        galeria: p.galeria
       }
     );
   }

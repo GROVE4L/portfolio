@@ -1,0 +1,9 @@
+.galeria a img {
+    cursor: zoom-in;
+	opacity: 1;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.galeria a:hover img {
+	opacity: .8;
+}

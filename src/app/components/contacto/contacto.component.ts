@@ -24,9 +24,10 @@ export class ContactoComponent implements OnInit {
     
     let datos = form.value;
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    this.http.post('https://formspree.io/f/xayabaog', { name: datos.nombre, replyto: datos.correo, message: datos.mensaje }, { 'headers': headers })
+    this.http.post('https://formspree.io/f/xayabaog', { name: datos.nombre, replyto: datos.correo, message: datos.mensaje }, { 'headers': headers })    
     .toPromise().then(response => {
       this.enviando = false;
+      console.log(response);
       if(response["ok"]) {
         this.exitoEnvio = true;
         $('.toast').toast('show');
@@ -36,6 +37,10 @@ export class ContactoComponent implements OnInit {
         this.exitoEnvio = false;
         $('.toast').toast('show');
       }
+    }).catch( () => {
+      this.enviando = false;
+      this.exitoEnvio = false;
+      $('.toast').toast('show');
     });  
   }
   

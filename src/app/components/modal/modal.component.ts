@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+declare let $: any;
 
 @Component({
   selector: 'app-modal',
@@ -14,8 +15,9 @@ export class ModalComponent implements OnInit {
   public descripcion = null;
   public caracteristicas = [];
   public imgUrl = null;
+  public galeria = [];
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
   setDialogProperties(props: any) {  
@@ -23,10 +25,11 @@ export class ModalComponent implements OnInit {
     this.titulo = props.titulo || "Sin título";
     this.descripcion = props.descripcion || "Sin descripción";    
     this.caracteristicas = props.caracteristicas || [];
+    this.galeria = props.galeria || [];
   }
 
   onActionTake() {            
     this.modal.close();
-  }
+  }  
 
 }

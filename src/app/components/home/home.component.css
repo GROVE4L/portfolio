@@ -3,5 +3,8 @@
     transform: scaleX(-1);
 }
 .font-size {
-    font-size: 3.5em;
+    font-size: 3em;
+}
+.lh-lg {
+    text-align: justify;
 }

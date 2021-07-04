@@ -3,54 +3,55 @@
 <div class="row ms-1 me-1 my-5">
     <div class="col-12 text-center fade-in">
         <h1>
-            From e-commerce platforms to virtual worlds.
+            Estos son algunos trabajos que he realizado.
         </h1>
         <p>
-            Mostly a trip down memory lane. To be expanded one day.
+            Desde que empezé a programar desde pequeño hasta hoy en día!
         </p>
     </div>
     <div class="d-flex flex-column">
 
         <div *ngFor="let p of proyectoService.getProyectos()">
+
             <div class="card mt-4 mx-3" data-aos="fade-up" data-aos-duration="750" data-aos-once="true"> 
+                <!--Caja para mostrar el proyecto-->
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12 col-lg-9 text-dark">
+                            <!--Imagen de Móvil-->
                             <div class="row">
                                 <div class="col text-center">
-                                    <img [attr.src]="p.imgUrl" class="img-fluid d-md-none d-lg-none" width="180" alt="Logo-Mini" (click)="verMas(p)">
+                                    <img [attr.src]="p.imgUrl" class="img-fluid d-md-none d-lg-none image-fade" width="180" alt="Logo-Mini" (click)="verMas(p)">
                                 </div>                                
-                            </div>                            
-                            
-                            <p class="h1 mt-3">{{p.nombre}}</p>
-                            <br/>
+                            </div>
+                            <!--Imagen de nombre del proyecto-->
+                            <p class="h1 mt-3">{{p.nombre}}</p><br/>                            
+                            <!--Descripcion del proyecto-->
                             <div *ngIf="p.descripcion.length < 140; else mostrardDescripcionCorta">
-                                <p class="h4">{{p.descripcion}}</p>
+                                <p class="h4 pre">{{p.descripcion}}</p>
                             </div>
                             <ng-template #mostrardDescripcionCorta>                                
-                                <p class="h4">{{acortarTexto(p.descripcion)}} ...</p>
+                                <p class="h4 pre">{{acortarTexto(p.descripcion)}} ...</p>
                                 <span class="link-primary text-decoration-underline" (click)="verMas(p)" style="cursor: pointer;">Leer más...</span>
                             </ng-template>
-                        </div>
-                        <div class="col"> <!--Imagen de Escritorio-->
-                            <div>
-                                <figure><img [attr.src]="p.imgUrl" width="300" class="mx-auto d-none d-md-block d-lg-block" (click)="verMas(p)"></figure>                                
-                            </div>
 
-                            
-                            
+                        </div>
+                        <!--Imagen de Escritorio-->
+                        <div class="col"> 
+                            <div>
+                                <figure><img [attr.src]="p.imgUrl" width="300" class="mx-auto d-none d-md-block d-lg-block image-fade" (click)="verMas(p)"></figure>                                
+                            </div>                            
                         </div>
                     </div>   
                 </div>
-
                 <div class="card-footer">
                     <div class="d-grid gap-2 col-4 col-sm-3 col-md-2">
-                        <button type="button" class="btn btn-warning" (click)="verMas(p)">Ver más...</button>                    
+                        <button type="button" class="btn btn-warning bg-orange" (click)="verMas(p)">Ver más...</button>                    
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-
 <app-footer></app-footer>
