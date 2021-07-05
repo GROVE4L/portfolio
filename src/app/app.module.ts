@@ -9,7 +9,6 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { TrabajosComponent } from './components/trabajos/trabajos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -20,8 +19,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     HomeComponent,
     MenuComponent,
     TrabajosComponent,
-    FooterComponent,
-    RedesSocialesComponent,
+    FooterComponent,    
     ModalComponent,
     ContactoComponent
   ],
