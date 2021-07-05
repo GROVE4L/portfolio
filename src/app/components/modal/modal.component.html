@@ -3,13 +3,29 @@
     <h4 class="modal-title" id="confirm-modal-titulo">{{titulo}}</h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
 </div>
-<div class="modal-body text-dark">
+<div class="modal-body text-dark">    
     <!--Mostrar la galería de fotos o, si no tiene galería, mostrar imagen principal del proyecto-->
     <div *ngIf="galeria != null && galeria.length > 0; else sinGaleria" class="galeria">
-        <div class="text-center">            
-            <a *ngFor="let image of galeria" [attr.href]="image" data-lightbox="photos" class="mx-2 "> 
-                <img class="img-fluid" [attr.src]="image" width="150"> 
-            </a>
+        <div class="row me-1 ms-1">
+            <span class="text-center fs-3">Galería <i class="fas fa-camera"></i></span>
+        </div> 
+        
+        <div class="text-center"> <!--[spaceBetween]="-180"-->
+            <swiper 
+            [slidesPerView]="3"             
+            [centeredSlides]="true"
+            [spaceBetween]="0"
+            [autoplay]="{ delay: 1000, disableOnInteraction: true}" 
+            [pagination]="{ clickable: true }"
+            [navigation]="true"
+            [loop]="true">
+                <ng-template swiperSlide *ngFor="let image of galeria">
+                    <a [attr.href]="image" data-lightbox="photos" >
+                        <img class="img-fluid my-1" [attr.src]="image" width="150"> <!--width="150"-->
+                    </a>
+                </ng-template>
+                
+            </swiper>
         </div>
     </div>    
     <ng-template #sinGaleria>                                
@@ -19,7 +35,9 @@
     <p class="mt-4" style="white-space: pre-wrap">{{descripcion}}</p>
     <!--Mostrar listado de caracteristicas si es que tienen-->
     <div *ngIf="caracteristicas != null && caracteristicas.length > 0">
-        <span class="fs-3">Características</span>
+        <div class="row me-1 ms-1">
+            <span class="text-center fs-3">Descripción</span>
+        </div>  
         <ul class="list-group">         
             <div *ngFor="let i of caracteristicas">
                 <li class="list-group-item list-group-item-primary">{{i}}</li>            
@@ -28,5 +46,5 @@
     </div>
 </div>
 <div class="modal-footer d-flex justify-content-center bg-light">
-    <button type="button" class="btn btn-primary bg-orange border-0" id="modal-btn-si" (click)="onActionTake()"><span class="ml-5 mr-5">Cerrar</span></button>    
+    <button type="button" class="btn btn-warning border-0" id="modal-btn-si" (click)="onActionTake()"><span class="ml-5 mr-5">Cerrar</span></button>    
 </div>

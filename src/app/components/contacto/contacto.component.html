@@ -22,7 +22,7 @@
             </div>
             
             <div class="d-flex">
-                <button type="submit" class="btn btn-lg" [class.bg-orange]="!enviando" [class.bg-secondary]="enviando" [disabled]="enviando">
+                <button type="submit" class="btn btn-lg" [class.btn-warning]="!enviando" [class.btn-secondary]="enviando" [disabled]="enviando">
                     <span *ngIf="enviando" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     Enviar
                 </button> 

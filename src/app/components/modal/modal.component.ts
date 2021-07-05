@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+// import Swiper core and required modules
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from 'swiper/core';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
 declare let $: any;
 
 @Component({

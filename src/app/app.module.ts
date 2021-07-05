@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

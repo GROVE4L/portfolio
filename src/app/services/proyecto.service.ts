@@ -10,7 +10,7 @@ export class ProyectoService {
     descripcion: "Mi portfolio de presentación.\nNueva Linea",
     caracteristicas: ["Rapido", "Seguro", "Facil de usar"], 
     imgUrl:"https://i.ibb.co/jbGYSDG/G.jpg",
-    galeria: ["https://i.ibb.co/PTDn2nt/Demo.jpg","../../../assets/img/fondoport.png"] },
+    galeria: ["https://i.ibb.co/PTDn2nt/Demo.jpg","../../../assets/img/fondoport.png","https://i.ibb.co/CmMt9bT/negocio-Logo.png","https://i.ibb.co/jLzJ26S/WolfST2.png"] },
 
     { nombre: "Sistema de GROVE4L", 
     descripcion: "Una descripcion mediana, se seguira con lorem: Cupcake ipsum dolor sit amet gummies brownie macaroon jelly-o. Soufflé topping marshmallow. Toffee apple pie pudding jelly-o candy pastry muffin wafer marshmallow. Tart brownie jelly beans.",

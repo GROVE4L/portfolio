@@ -35,23 +35,23 @@
                                 <span class="link-primary text-decoration-underline" (click)="verMas(p)" style="cursor: pointer;">Leer más...</span>
                             </ng-template>
 
-                        </div>
+                        </div>                        
                         <!--Imagen de Escritorio-->
-                        <div class="col"> 
-                            <div>
-                                <figure><img [attr.src]="p.imgUrl" width="300" class="mx-auto d-none d-md-block d-lg-block image-fade" (click)="verMas(p)"></figure>                                
-                            </div>                            
+                        <div class="col p-2"> 
+                            <img [attr.src]="p.imgUrl" width="300" class="mx-auto d-none d-md-block d-lg-block image-fade" (click)="verMas(p)">
+                        </div>   
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-grid gap-2 col-4 col-sm-3 col-md-2">
+                            <button type="button" class="btn btn-warning" (click)="verMas(p)">Ver más...</button>                    
                         </div>
-                    </div>   
-                </div>
-                <div class="card-footer">
-                    <div class="d-grid gap-2 col-4 col-sm-3 col-md-2">
-                        <button type="button" class="btn btn-warning bg-orange" (click)="verMas(p)">Ver más...</button>                    
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
+
+
 <app-footer></app-footer>

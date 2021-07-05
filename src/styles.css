@@ -11,10 +11,6 @@ body  {
 .text-orange {
     color: rgb(237, 132, 12) !important;
 }
-.bg-orange{
-    color: #000 !important;
-    background-color: rgb(237, 132, 12) !important;
-}
 
 .fade-in {
     animation: fadein 1.8s;

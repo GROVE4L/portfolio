@@ -1,11 +1,18 @@
 .image-fade {
-    cursor: pointer;
+	
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 10px;
+    cursor: pointer;	
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-.image-fade:hover {
+.image-fade:hover {	
+	border-color: rgb(237, 132, 12);
+	border-width: 2px;
 	cursor: pointer;
-	opacity: .8;
+	opacity: .85;
+	border-radius: 50px;
 }
 .pre {
 	white-space: pre-wrap
