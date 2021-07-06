@@ -12,6 +12,10 @@ body  {
     color: rgb(237, 132, 12) !important;
 }
 
+::selection{
+    background-color:rgb(237, 132, 12);
+    color: black;
+}
 .fade-in {
     animation: fadein 1.8s;
 }
