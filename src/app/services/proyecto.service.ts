@@ -7,20 +7,21 @@ export class ProyectoService {
 
   private proyectoList: Array<{nombre:string, descripcion: string, caracteristicas: string[] , imgUrl: string, galeria: string[]}> = [
     { nombre: "Portfolio", 
-    descripcion: "Mi portfolio de presentación.\nNueva Linea",
-    caracteristicas: ["Rapido", "Seguro", "Facil de usar"], 
+    descripcion: "El mismo portfolio forma parte de esta muestra. Es que su misma creación es un ejemplo breve pero consiso de los frecuentes procesos de la programacion: Bucle, array, etc.\nLe invito a observar mi código, así estimará un panorama de mi forma de programar.",
+    caracteristicas: [], 
     imgUrl:"https://i.ibb.co/jbGYSDG/G.jpg",
-    galeria: ["https://i.ibb.co/PTDn2nt/Demo.jpg","../../../assets/img/fondoport.png","https://i.ibb.co/CmMt9bT/negocio-Logo.png","https://i.ibb.co/jLzJ26S/WolfST2.png"] },
+    //galeria: ["https://i.ibb.co/PTDn2nt/Demo.jpg","../../../assets/img/fondoport.png","https://i.ibb.co/CmMt9bT/negocio-Logo.png","https://i.ibb.co/jLzJ26S/WolfST2.png"] },
+    galeria: [] },
 
-    { nombre: "Sistema de GROVE4L", 
-    descripcion: "Una descripcion mediana, se seguira con lorem: Cupcake ipsum dolor sit amet gummies brownie macaroon jelly-o. Soufflé topping marshmallow. Toffee apple pie pudding jelly-o candy pastry muffin wafer marshmallow. Tart brownie jelly beans.",
-    caracteristicas: [], //Sin caracteristicas
-    imgUrl:"https://i.ibb.co/CmMt9bT/negocio-Logo.png",
+    { nombre: "Juguetería WaWa", 
+    descripcion: "Si juntamos una numerosa cantidad de juguetes y una administracion desorientada, tenemos como resultado una extenuante jornada laboral para los integrantes de esta juguetería. Dicha situación fue lo que llevo al dueño a contactarme.\nEntonces, ¿que le ofrecí?, un sistema que le permite administrar de forma detallada y comprobable cada uno de los movimientos de su negocio.",
+    caracteristicas: [],
+    imgUrl:"../../../assets/img/Proyecto-2/LogoProyecto.png",
     galeria: [] }, 
 
     { nombre: "Sistema de Restaurant", 
-    descripcion: "Una descripcion muy larga: Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas 'Letraset', las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.",
-    caracteristicas: ["Caracteristica A", "Caracteristica B", "Caracteristica C"], 
+    descripcion: "Circunstancias recientes han hecho que el sector gastronomico se acerque aun más al internet. Este le ofrece un mundo mas amplio de posibilidades, desde tener una organizacion mas estable en el local hasta un eficiente servicio de delivery.\nY, en este contexto, ofrezco un programa que pueda hacer el trajecto a la digitalidad más comodo y accesible",
+    caracteristicas: [], 
     imgUrl:"https://i.ibb.co/PTDn2nt/Demo.jpg",
     galeria: [] },
   ];

@@ -27,11 +27,11 @@
                             <!--Imagen de nombre del proyecto-->
                             <p class="h1 mt-3">{{p.nombre}}</p><br/>                            
                             <!--Descripcion del proyecto-->
-                            <div *ngIf="p.descripcion.length < 140; else mostrardDescripcionCorta">
-                                <p class="h4 pre">{{p.descripcion}}</p>
+                            <div *ngIf="p.descripcion.length < largoTexto; else mostrardDescripcionCorta">
+                                <p class="h4 pre" style="text-align: justify">{{p.descripcion}}</p>
                             </div>
                             <ng-template #mostrardDescripcionCorta>                                
-                                <p class="h4 pre">{{acortarTexto(p.descripcion)}} ...</p>
+                                <p class="h4 pre" style="text-align: justify">{{acortarTexto(p.descripcion)}} ...</p>
                                 <span class="link-primary text-decoration-underline" (click)="verMas(p)" style="cursor: pointer;">Leer más...</span>
                             </ng-template>
 
@@ -42,7 +42,7 @@
                         </div>   
                     </div>
                     <div class="card-footer">
-                        <div class="d-grid gap-2 col-4 col-sm-3 col-md-2">
+                        <div class="d-grid gap-2 col-6 col-sm-3 col-md-2">
                             <button type="button" class="btn btn-warning" (click)="verMas(p)">Ver más...</button>                    
                         </div>
                     </div>

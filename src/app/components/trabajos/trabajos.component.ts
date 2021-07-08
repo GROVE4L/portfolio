@@ -10,6 +10,7 @@ import { ProyectoService } from 'src/app/services/proyecto.service'
 })
 export class TrabajosComponent implements OnInit {
 
+  largoTexto: number = 300;
   constructor(public modalService: ModalService, public proyectoService: ProyectoService) { }
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class TrabajosComponent implements OnInit {
   }
 
   public acortarTexto(texto: string) {            
-    var trimmedString = texto.substr(0, 140);
+    var trimmedString = texto.substr(0, this.largoTexto);
     trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
     return trimmedString;
   }
