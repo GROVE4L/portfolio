@@ -12,12 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public descargar() {
+  public descargarCV() {
     let link = document.createElement("a");
     link.download = "CV-GuidoRojas-APU";
     link.href = "/assets/archivos/CV_GuidoGabrielRojas_AnalistaPorgramadorUniversitario.pdf";
     link.click();
-
-    //window.open('/assets/archivos/CV_GuidoGabrielRojas_AnalistaPorgramadorUniversitario.pdf', '_blank');
   }
 }

@@ -12,23 +12,21 @@
     <div class="d-flex flex-column">
 
         <div *ngFor="let p of proyectoService.getProyectos()">
-
+            <!--Card para mostrar el proyecto-->
             <div class="card mt-4 mx-3" data-aos="fade-up" data-aos-duration="750" data-aos-once="true"> 
-                <!--Caja para mostrar el proyecto-->
+                <!--Nombre del proyecto-->
                 <div class="card-header text-dark">
                     <p class="h2 mt-3">{{p.nombre}}</p>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12 col-lg-9 text-dark">
-                            <!--Imagen de Móvil-->
+                            <!--Imagen en Móvil-->
                             <div class="row">
                                 <div class="col text-center">
                                     <img [attr.src]="p.imgUrl" class="img-fluid d-md-none d-lg-none image-fade" width="180" alt="Logo-Mini" (click)="verMas(p)">
                                 </div>                                
-                            </div>
-                            <!--Imagen de nombre del proyecto-->
-                            <!--<p class="h1 mt-3">{{p.nombre}}</p><br/>-->
+                            </div>                            
                             <!--Descripcion del proyecto-->
                             <div *ngIf="p.descripcion.length < largoTexto; else mostrardDescripcionCorta">
                                 <p class="h4 pre" style="text-align: justify">{{p.descripcion}}</p>
@@ -37,7 +35,6 @@
                                 <p class="h4 pre" style="text-align: justify">{{acortarTexto(p.descripcion)}} ...</p>
                                 <span class="link-primary text-decoration-underline" (click)="verMas(p)" style="cursor: pointer;">Leer más...</span>
                             </ng-template>
-
                         </div>                        
                         <!--Imagen de Escritorio-->
                         <div class="col p-2"> 

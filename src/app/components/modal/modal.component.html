@@ -8,9 +8,8 @@
     <div *ngIf="galeria != null && galeria.length > 0; else sinGaleria" class="galeria">
         <div class="row me-1 ms-1">
             <span class="text-center fs-3">Galería <i class="fas fa-camera"></i></span>
-        </div> 
-        
-        <div class="text-center"> <!--[spaceBetween]="-180"-->
+        </div>         
+        <div class="text-center">
             <swiper 
             [slidesPerView]="4"             
             [centeredSlides]="true"
@@ -36,13 +35,11 @@
    
     <!--Mostrar demo-->    
     <div *ngIf="linkDemo != ''">
-        <p class="mt-4">Link demostración: <a [attr.href]="linkDemo" target="_blank">{{linkDemo}}</a></p>
+        <p class="mt-4">Link adjunto: <a [attr.href]="linkDemo" target="_blank">{{linkDemo}}</a></p>
         <div *ngIf="credenciales != ''">
             <p class="mt-4" style="white-space: pre-wrap">{{credenciales}}</p>
         </div>
     </div>
-    
-
     <!--Mostrar listado de caracteristicas si es que tienen-->
     <div *ngIf="caracteristicas != null && caracteristicas.length > 0">
         <div class="row me-1 ms-1">
