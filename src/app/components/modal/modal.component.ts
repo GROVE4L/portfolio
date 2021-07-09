@@ -27,6 +27,8 @@ export class ModalComponent implements OnInit {
   public caracteristicas = [];
   public imgUrl = null;
   public galeria = [];
+  public linkDemo = null;
+  public credenciales = null;
 
   ngOnInit(): void {    
   }
@@ -37,6 +39,8 @@ export class ModalComponent implements OnInit {
     this.descripcion = props.descripcion || "Sin descripción";    
     this.caracteristicas = props.caracteristicas || [];
     this.galeria = props.galeria || [];
+    this.linkDemo = props.linkDemo || "";
+    this.credenciales = props.credenciales || "";
   }
 
   onActionTake() {            

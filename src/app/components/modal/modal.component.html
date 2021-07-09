@@ -12,15 +12,15 @@
         
         <div class="text-center"> <!--[spaceBetween]="-180"-->
             <swiper 
-            [slidesPerView]="3"             
+            [slidesPerView]="4"             
             [centeredSlides]="true"
             [spaceBetween]="0"
-            [autoplay]="{ delay: 1000, disableOnInteraction: true}" 
+            [autoplay]="{ delay: 1000, disableOnInteraction: false}" 
             [pagination]="{ clickable: true }"
             [navigation]="true"
             [loop]="true">
-                <ng-template swiperSlide *ngFor="let image of galeria">
-                    <a [attr.href]="image" data-lightbox="photos" >
+                <ng-template swiperSlide *ngFor="let image of galeria; let index=index">
+                    <a [attr.href]="image" data-lightbox="photos" [attr.alt]="'img-'+index">
                         <img class="img-fluid my-1" [attr.src]="image" width="150"> <!--width="150"-->
                     </a>
                 </ng-template>
@@ -29,10 +29,20 @@
         </div>
     </div>    
     <ng-template #sinGaleria>                                
-        <img [attr.src]="imgUrl" width="150" class="img-fluid mx-auto d-block">
+        <img [attr.src]="imgUrl" width="150" class="img-fluid mx-auto d-block" alt="img-Proyecto">
     </ng-template>
     <!--Mostrar descripcion-->
     <p class="mt-4" style="white-space: pre-wrap">{{descripcion}}</p>
+   
+    <!--Mostrar demo-->    
+    <div *ngIf="linkDemo != ''">
+        <p class="mt-4">Link demostración: <a [attr.href]="linkDemo" target="_blank">{{linkDemo}}</a></p>
+        <div *ngIf="credenciales != ''">
+            <p class="mt-4" style="white-space: pre-wrap">{{credenciales}}</p>
+        </div>
+    </div>
+    
+
     <!--Mostrar listado de caracteristicas si es que tienen-->
     <div *ngIf="caracteristicas != null && caracteristicas.length > 0">
         <div class="row me-1 ms-1">
@@ -40,7 +50,7 @@
         </div>  
         <ul class="list-group">         
             <div *ngFor="let i of caracteristicas">
-                <li class="list-group-item list-group-item-primary">{{i}}</li>            
+                <li class="list-group-item list-group-item-success"><i class="fas fa-check"></i> {{i}}</li>            
             </div>            
         </ul>
     </div>

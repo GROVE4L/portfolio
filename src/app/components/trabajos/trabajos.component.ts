@@ -23,7 +23,9 @@ export class TrabajosComponent implements OnInit {
         descripcion: p.descripcion,
         caracteristicas: p.caracteristicas,
         imgUrl: p.imgUrl,
-        galeria: p.galeria
+        galeria: p.galeria,
+        linkDemo: p.linkDemo,
+        credenciales: p.credenciales
       }
     );
   }
