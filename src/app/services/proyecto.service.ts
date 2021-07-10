@@ -50,7 +50,7 @@ export class ProyectoService {
     descripcion: "Desarrollo de servidores multijugadores SA-MP. En este lenguaje aprendí las nociones básicas de la programacion asi como tambien la lógica para implementar soluciones eficientes y creativas. Programación lineal en lenguaje Pawn, almacenamiento de datos usando MySQL, o bien, en archivos de configuración de manera local.",
     caracteristicas: ["Pawn", "Basado en sintaxis C", "Programación Lineal", "Includes", "MySQL", "Plugins", "Scriptfiles"],
     imgUrl:"../../../assets/img/Proyecto-6/LogoProyecto.png",
-    galeria: [],
+    galeria: ["../../../assets/img/Proyecto-6/img-1-min.jpg","../../../assets/img/Proyecto-6/img-2-min.png"],
     linkDemo: "https://es.wikipedia.org/wiki/Pawn",
     credenciales: "" },
   ];
