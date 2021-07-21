@@ -16,7 +16,8 @@ a {
   background-color: rgb(231, 144, 45);
   border-color: rgb(0, 0, 0);
 }
-/*Fin colores toggle en version movil*/
+
+
 .navbar-light .navbar-nav .nav-link {
   color: rgb(255, 255, 255);
 }
@@ -39,16 +40,17 @@ a {
 }
 
 @keyframes flotar{
-  from {transform:translate(0, 0px);}
-  20% {transform:translate(0, -3px);}
-  80% {transform:translate(0, 3px);}
-  to {transform: translate(0, 0px);}    
+  from { transform:translate(0, 0px); }
+  20% { transform:translate(0, -3px); }
+  80% { transform:translate(0, 3px); }
+  to { transform: translate(0, 0px); }
 }
 .redes-sociales a {
-  -webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .redes-sociales a:hover {		
   color: rgb(237, 132, 12); 
+  transform: rotate(360deg);  
 }
