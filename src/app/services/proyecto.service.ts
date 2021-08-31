@@ -15,7 +15,7 @@ export class ProyectoService {
     credenciales: "" },
 
     { nombre: "Sistema Gestión de Restaurante", 
-    descripcion: "Circunstancias recientes han hecho que el sector gastronómico se acerque aán más al internet. Este le ofrece un mundo más amplio de posibilidades, desde tener una organización más estable en el local hasta un eficiente servicio de delivery.\nY, en este contexto, ofrezco un programa que pueda hacer el trayecto a la digitalidad más cómodo y accesible.",
+    descripcion: "Circunstancias recientes han hecho que el sector gastronómico se acerque aún más al internet. Este le ofrece un mundo más amplio de posibilidades, desde tener una organización más estable en el local hasta un eficiente servicio de delivery.\nY, en este contexto, ofrezco un programa que pueda hacer el trayecto a la digitalidad más cómodo y accesible.",
     caracteristicas: ["Angular", "Node.js", "Javascript", "Chart.js", "Bootstrap", "ng-bootstrap","Typescript", "Firebase", "Web Responsive"],
     imgUrl: "https://i.ibb.co/PTDn2nt/Demo.jpg",
     galeria: ["../../../assets/img/Proyecto-3/img-1-min.png","../../../assets/img/Proyecto-3/img-2-min.png","../../../assets/img/Proyecto-3/img-3-min.png","../../../assets/img/Proyecto-3/img-4-min.png","../../../assets/img/Proyecto-3/img-5-min.png","../../../assets/img/Proyecto-3/img-6-min.png","../../../assets/img/Proyecto-3/img-7-min.png"],
@@ -31,7 +31,7 @@ export class ProyectoService {
     credenciales: "" }, 
 
     { nombre: "Carnicería Del Campo", 
-    descripcion: "Esta aplicación de escritorio de gestión de stock fue uno mis primeros proyectos para un cliente: una carnicería ubicada en San Salvador de Jujuy.\nEl proyecto fue realizado con el fin de agilizar los procesos en el negocio por lo que fue una oportunidad perfecta para implementar mis conocimientos en aplicaciones de escritorio, desarrollado en C# y usando SQL Server como base de datos.\LPasado un año desde la implementación inicial, decidí actualizar el sistema de escritorio a una aplicación web, obteniendo resultados satisfactorios y agilizando aún más los procesos asi como también el soporte técnico del proyecto.",
+    descripcion: "Esta aplicación de escritorio de gestión de stock fue uno mis primeros proyectos para un cliente: una carnicería ubicada en San Salvador de Jujuy.\nEl proyecto fue realizado con el fin de agilizar los procesos en el negocio por lo que fue una oportunidad perfecta para implementar mis conocimientos en aplicaciones de escritorio, desarrollado en C# y usando SQL Server como base de datos.\nPasado un año desde la implementación inicial, decidí actualizar el sistema de escritorio a una aplicación web, obteniendo resultados satisfactorios y agilizando aún más los procesos asi como también el soporte técnico del proyecto.",
     caracteristicas: ["Angular", "Node.js", "Javascript", "Chart.js", "Bootstrap", "Hasar SMH/PT 250 F", "Typescript", "Firebase", "Web Responsive"],
     imgUrl:"../../../assets/img/Proyecto-4/LogoProyecto.png",
     galeria: [],
