@@ -20,7 +20,7 @@ export class ProyectoService {
     imgUrl: "https://i.ibb.co/PTDn2nt/Demo.jpg",
     galeria: ["../../../assets/img/Proyecto-3/img-1-min.png","../../../assets/img/Proyecto-3/img-2-min.png","../../../assets/img/Proyecto-3/img-3-min.png","../../../assets/img/Proyecto-3/img-4-min.png","../../../assets/img/Proyecto-3/img-5-min.png","../../../assets/img/Proyecto-3/img-6-min.png","../../../assets/img/Proyecto-3/img-7-min.png"],
     linkDemo: "https://prueba-restaurante.ga/",
-    credenciales: "Usuario: dueno\nPassword: dueno"},
+    credenciales: "Usuario: admin\nPassword: admin"},
 
     { nombre: "Juguetería WaWa", 
     descripcion: "Si juntamos una numerosa cantidad de juguetes y una administración desorientada, tenemos como resultado una extenuante jornada laboral para los integrantes de esta juguetería. Dicha situación fue lo que llevo al dueño a contactarme.\nEntonces, ¿qué le ofrecí?, un sistema que le permite administrar de forma detallada y comprobable cada uno de los movimientos de su negocio.",
